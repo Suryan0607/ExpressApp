@@ -3,13 +3,6 @@ const User = require('../models/usermodels');
 const router = express.Router();
 
 
-
-
-router.get('/', (req, res) => {
-    res.status(200).send('Welcome to my App')
-})
-
-
 router.get('/users', (req, res) => {
     try{
         User.find((err, data) => {
